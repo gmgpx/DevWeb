@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* Reset de CSS */
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font: inherit;
+    outline: 0;
+    font-family: 'Poppins', sans-serif;
+    background-color: transparent;
+}
+
+body{
+    background-image: url("https://www.adv-polymer.com/hs-fs/hubfs/industry-1827884_1280.jpg?width=1280&name=industry-1827884_1280.jpg");
+}
+
+h1{
+    margin: 15px;
+    font-size: 30px;
+    text-align: center;
+}
+.logo{
+    position: absolute;
+    max-width: 100px;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    width: 60vh;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: left; /* Alinha o texto ao centro dentro do container */
+    backdrop-filter: blur(1rem);
+    padding: 20px; /* Espaçamento interno opcional */
+    border-radius: 10px; /* Borda arredondada opcional */
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+}
+
+label{
+    margin: 1px;
+}
+
+#salarioBruto{
+    margin: 5px;
+    padding: 5px;
+    background-color: transparent;
+    border-bottom: 1.5px #000 solid;
+    outline: 0;
+}
+#dependentes{
+    margin: 5px;
+    padding: 5px;
+    background-color: transparent;
+    border-bottom: 1.5px #000 solid;
+    outline: 0;
+}
+
+input[type=number]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
+button{
+    background-color: #54B435;
+    color: #fff;
+    padding: 5px;
+    margin: 6px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #379237;
+    transition: 0.5s;
+}

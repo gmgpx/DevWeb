@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/png" sizes="16x16" href="./favicon/favicon-16x16.png">
+
+<title>Jurassic World</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="welcome-container">
+    <h1>Bem-vindo ao mundo Jurássico!</h1>
+  </div>
+  <div class="form-container">
+    <input type="text" id="username" placeholder="Username">
+    <input type="password" id="password" placeholder="Password">
+    <button onclick="createOrUpdate()">Create/Update</button>
+    <button onclick="search()">Search</button>
+  </div>
+  <div id="data-container">
+    <table id="user-table">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Username</th>
+          <th>Password</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody id="user-table-body">
+        <!-- Data rows will be inserted here dynamically -->
+      </tbody>
+    </table>
+    <p id="no-data-msg" style="display: none;">No data available.</p>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

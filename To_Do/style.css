@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Jersey+20&display=swap');
+
+*{
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+    text-decoration: none;
+}
+
+body{
+    display: flex;
+    font-family: 'Jersey 20', sans-serif;
+}
+
+
+.ContEsq{
+    position: sticky;
+    top: 0;
+    width: 50%;
+    height: 100vh;
+    background-image: url("https://wallpapercave.com/wp/wp9618687.jpg");
+    background-size: cover;
+}
+
+.Contador{
+    height: 40vh;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.Nova{
+    height: 60vh;
+    display: flex;
+    justify-content: center;
+}
+
+/* contadores */
+.tarefas{
+    width: 100%;
+    height: fit-content;
+    justify-content: space-around;
+
+    margin: 5px 3px;
+    padding: 15px 0px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-radius: 1rem;
+    background-color: rgba(255, 255, 255, 0.6);
+}
+
+
+
+.criartarefa{
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; 
+
+    padding: 15px;
+    margin: 30px;
+    width: 80%;
+    min-width: 270px;
+    background-color: rgba(255, 255, 255, 0.6);
+    box-shadow: rgba(0, 0, 0, 0.30) 0px 3px 8px;
+    border-radius: 1rem;
+
+}
+.criartarefa h4{
+    margin: 10px 5px;
+}
+.criartarefa h1{
+    width: 100%;
+    text-align: center;
+    margin: 10px 0px;
+}
+.digitartextos{
+    margin: 10px auto 0px auto;
+    font-size: 25px;
+    padding: 5px 2vw;
+    background: none;
+    outline: 0;
+}
+.digitartextos:hover {
+    border: 2px solid #000;
+    border-radius: 0.5rem;
+}
+.enviar{
+    margin: 10px auto 0px auto;
+    width: 50%;
+    font-size: 20px;
+    padding: 5px;
+    border-radius: 1rem;
+    color: #fff;
+    background-color: #000;
+    cursor: pointer;
+}
+
+
+
+/* Container direito */
+
+.ContDir{
+    width: 50%;
+    height: fit-content;
+    background-color: rgb(255, 255, 255);
+}
+
+.tarefasprogresso{
+    background-color: rgba(255, 255, 255, 0.8);
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    border-radius: 0.5rem;
+    margin: 5px;
+}
+.tarefasprogresso h1, h4{
+    padding: 10px 0 0 1vw;
+}
+
+.status{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 95%;
+    margin: 20px 0px;
+    padding: 0 5%;
+    gap: 1rem;
+}
+
+.Apagar{
+    padding: 5px;
+    width: 100%;
+    background-color: rgba(115, 115, 115, 0.3);
+    color: #ffffff;
+    border: 2px solid rgba(115, 115, 115, 0.3);
+    border-radius: 0px 0px 10px 10px;
+    cursor: pointer;
+}
+.Apagar:hover {
+    border: 2px solid #000;
+    background-color: rgb(255, 0, 0);
+    color: #fff;
+}

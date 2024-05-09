@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap');
+
+/* Define estilos para todos os elementos */
+* {
+    margin: 0; /* Margem zero */
+    padding: 0; /* Preenchimento zero */
+    box-sizing: border-box; /* Caixa-modelo de borda */
+}
+
+/* Estilos para o corpo da página */
+body {
+    height: 100vh; /* Altura da viewport */
+    display: flex; /* Container flexível */
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+    font-family: JetBrains Mono; /* Fonte */
+    background-color: #0d0202; /* Cor de fundo */
+    color: #eee; /* Cor do texto */
+}
+
+svg{
+    width: 25px; /* Largura do SVG */
+}
+
+/* Estilos para o logotipo no cabeçalho */
+header .logo{
+    font-weight: bold; /* Negrito */
+    text-transform: lowercase; /* Transformação de texto */
+}
+
+/* Estilos para o menu no cabeçalho */
+header .menu{
+    margin: 0; /* Margem zero */
+    list-style: none; /* Lista sem marcadores */
+    display: flex; /* Container flexível */
+    justify-content: center; /* Centraliza horizontalmente */
+    gap: 2rem; /* Espaçamento entre itens */
+}
+
+/* Estilos para o cabeçalho */
+header {
+    width: 100%; /* Largura total */
+    max-width: 1200px; /* Largura máxima */
+    margin: 0 auto; /* Margem automática nas laterais */
+    display: flex; /* Container flexível */
+    align-items: center; /* Centraliza verticalmente */
+    justify-content: space-between; /* Espaçamento entre itens */
+    padding: 20px; /* Preenchimento interno */
+    position: fixed; /* Posição fixa */
+    top: 0; /* Topo da página */
+    left: 0; /* Esquerda da página */
+    right: 0; /* Direita da página */
+    z-index: 100; /* Z-index para sobreposição */
+    background-color: rgba(13, 2, 2, 0.9); /* Cor de fundo semi-transparente */
+}
+
+/* Estilos para a lista */
+.list {
+    display: flex; /* Container flexível */
+    gap: 1rem; /* Espaçamento entre itens */
+    transform-style: preserve-3d; /* Preserva estilo de transformação 3D */
+    list-style-type: none; /* Lista sem marcadores */
+    justify-content: center; /* Centraliza horizontalmente */
+
+    /* Efeitos de hover */
+    &:hover :not(:hover) {
+      margin: 0 -20px; /* Margem negativa */
+      transform: perspective(500px) rotateY(45deg) scale(0.95); /* Transformação 3D */
+    }
+
+    &:hover :not(:hover)::after {
+      opacity: 0.4; /* Opacidade */
+    }
+}
+
+/* Estilos para os itens da lista */
+.item {
+    position: relative; /* Posição relativa */
+    width: 120px; /* Largura */
+    aspect-ratio: 2/4; /* Proporção de aspecto */
+    border-radius: 0.5rem; /* Raio da borda */
+    background-size: cover; /* Tamanho do plano de fundo */
+    background-position: center; /* Posição do plano de fundo */
+    transition: margin 0.5s, transform 0.5s; /* Transições */
+
+    /* Imagens de fundo para os itens */
+    &:nth-of-type(1) { background-image: url(https://images.unsplash.com/photo-1494905998402-395d579af36f?q=80&w=1770&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D); }
+    &:nth-of-type(2) { background-image: url(https://media.istockphoto.com/id/970028668/pt/foto/3d-illustration-of-generic-compact-red-suv.jpg?s=1024x1024&w=is&k=20&c=QoCQHhoT_AekCxQklHH5DQ8KmxACBiQ3-MlB7Ln92b4=); }
+    &:nth-of-type(3) { background-image: url(https://images.unsplash.com/photo-1557800636-894a64c1696f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2265&q=80); }
+    &:nth-of-type(4) { background-image: url(https://images.unsplash.com/photo-1559181567-c3190ca9959b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2244&q=80); }
+    &:nth-of-type(5) { background-image: url(https://images.unsplash.com/photo-1618897996318-5a901fa6ca71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2264&q=80); }
+
+    /* Efeitos de hover para os itens */
+    &:hover ~ .item {
+      transform: perspective(500px) rotateY(-45deg) scale(0.95); /* Transformação 3D */
+    }
+
+    &:hover {
+      transform: perspective(500px) rotateY(0) scale(1.5); /* Transformação 3D */
+    }
+
+    &::after {
+      content: ''; /* Conteúdo do pseudo-elemento */
+      position: absolute; /* Posição absoluta */
+      width: inherit; /* Largura igual ao pai */
+      aspect-ratio: inherit; /* Proporção de aspecto igual ao pai */
+      border-radius: inherit; /* Raio da borda igual ao pai */
+      background-color: black; /* Cor de fundo */
+      opacity: 0; /* Opacidade */
+      transition: opacity 0.5s; /* Transição de opacidade */
+    }
+}
